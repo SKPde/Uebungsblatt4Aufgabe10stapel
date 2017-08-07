@@ -15,6 +15,7 @@ public class Stapelhaupt {
 	        System.out.println("Moegliche Aktionen:");
 	        System.out.println(" Klotz aufstapeln(1)," +
 	                           " Klotz runter nehmen (2)," + 
+	                           " Klotz anzeigen (3) " +
 	                           " Programmende (0)");
 	        System.out.print("Ihre Wahl: ");
 	        aktion = in.nextInt();
@@ -33,6 +34,15 @@ public class Stapelhaupt {
 	            System.out.print("Es wurde folgender Klotz entnommen:  ");
 	            System.out.println(klotz);
 	          }
+	        }
+	        else if (aktion == 3) {
+	        		klotz = ks.peek();
+	        		if(klotz == null) {
+	        			System.out.println("Es befindet sich kein Klotz im Stapel");
+	        		} else {
+	        		System.out.print("Folgender Klotz liegt gerade oben:  ");
+	            System.out.println(klotz);
+	        		}
 	        }
 	      } while (aktion != 0);
 	}

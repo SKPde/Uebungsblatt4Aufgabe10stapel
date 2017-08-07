@@ -26,4 +26,8 @@ public class KettenStapel {
 		return ausgabe;
 	}
 	
+	public Bauklotz peek() {
+		return oben;
+	}
+	
 }
