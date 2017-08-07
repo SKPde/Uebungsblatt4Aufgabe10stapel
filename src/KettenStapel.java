@@ -1,22 +1,29 @@
 
 public class KettenStapel {
 	
+	public Bauklotz oben;
 	
 	
-	
-	public void push() {
+	public void push(Bauklotz klotz) {
+		klotz.zuvor = oben;
+		oben = klotz;
 		
 	}
 	
-	public String pop() {
+	public Bauklotz pop() {
 		
+		if(oben == null) {
+			return null;
+		}
 		
-		return "test";
+		Bauklotz ausgabe = oben;
+		if(oben.zuvor != null) {
+			oben = oben.zuvor;
+		} else {
+			oben = null;
+		}
+
+		return ausgabe;
 	}
 	
-	public String peek() {
-		
-		
-		return "peektest";
-	}
 }
