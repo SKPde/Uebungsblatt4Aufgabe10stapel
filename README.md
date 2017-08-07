@@ -1,0 +1,2 @@
+# Uebungsblatt4Aufgabe10stapel
+Stapelverarbeitung einer liste
